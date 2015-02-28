@@ -1,0 +1,41 @@
+body {background-color: #FFFFFF;
+font-family:"arial";}
+h1 { color:navy; 
+text-align:center;}
+p {
+	margin-left: 400px;
+	text-align: center;
+}
+input[type=text] {
+    width: 200px;
+    padding: 10px;
+    font-size: 20px; 
+    color: white;  
+    font-family: "arial"
+    border: 3px;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+input[type=submit]{
+	width: 100px;
+	padding: 10px;
+	font-size:25px;
+	font-family: "arial";
+}
+ div.justified {
+        display: flex;
+        justify-content: center;
+    }
+#rightsect {
+    background-color:white;
+    float:left;
+    width:px;
+    padding:10px;
+}
+#image {
+    background-color:#FFFFFF;
+    float:left;
+   	height: 500px;
+    width: 600px; 
+    padding: 5px;
+}
