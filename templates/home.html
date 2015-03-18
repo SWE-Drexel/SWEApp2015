@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/sweappstyle.css' %}" />
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>SWEShare</title>
+	</head>
+	<body class="dashboard">
+		<div id="container">
+			<div id="header">
+				<div id="branding">
+					<br>
+					</br>
+					<h1 id="Homepage">
+						Welcome to SWE Share!
+					</h1>
+				</div>
+			</div>
+			<div id="content" class="colMS">
+				<div id="content-related" style="float: center;">
+					<div class="module" id="links">
+							<br>
+							</br>
+							<ul style="list-style-type:none">
+							{% if user.is_authenticated %}
+							<li><p><strong>Welcome, {{ user.username }}.</strong></p></li>
+							<li><a href="/goalpage"> Make a goal</a></li>
+							<li><a href="/logout_view">Logout</a></li>
+						{% else %}
+							<p><a href="/loginpage">Login</a></p>
+							<p><a href="/register">Register</a></p>
+						{% endif %}
+						    </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

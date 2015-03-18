@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/sweappstyle.css' %}" />
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+	</head>
+	<body class="dashboard">
+	<div id="container">
+		<div id="header">
+			<br>
+			</br>
+			<h1>Register</h1>
+		</div>
+		<div id="content">
+			<div id="content-main">
+				<div class="module">
+					<br>
+					</br>
+					{% if registered %}
+						<p>Thank you for Registering!</p>
+						<p><a href="/home/"> Return to homepage </a></p>
+					{% else %}
+					<form action="/register/" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						{{ user_form.as_p }}
+						<input type="submit" value="Register" />
+					</form>
+					<p><a href="/home/"> Return to homepage </a></p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
