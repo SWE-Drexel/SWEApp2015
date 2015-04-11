@@ -1,11 +1,80 @@
 body {background-color: #FFFFFF;
 font-family:"arial";}
 h1 { color:navy; 
-text-align:center;}
+text-align:center;
+font-family:Georgia,serif;}
+
 p {
-	margin-left: 400px;
+	
 	text-align: center;
+    display:inline;
 }
+
+a:hover {
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+#goalpg {
+    background-color:#DADFE1;
+}
+.container {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    margin-top:20px;
+}
+.footer a{
+    
+    padding-left: 15px;
+    font-weight:bold;
+    text-transform: uppercase;
+
+}
+.footer a:hover {
+    text-decoration:underline;
+    color:#3E044F;
+
+}
+
+
+.jumbotron {
+    background-color:#ffffff;
+    padding-top:10px;
+    margin-bottom:20px;
+    text-align: center;
+    
+}
+.footer {
+  height: 58px;  
+  padding: 5px 15px;
+  background-color: #dbdbdb;
+  text-align: center;
+    
+}
+#btnsignin {
+    height: 60px;
+    width: 300px;
+    background-color:#F58450;
+    text-align: center;
+    color: white;
+    font-family:Georgia,serif;
+    font-size:40px;
+    border-radius:10px;
+    margin-top:20px;
+    margin-bottom:-43px;
+    margin-left:auto;
+    margin-right:auto;  
+    cursor:pointer;
+    padding-top:3px;
+}
+#btnsignin:hover{
+    /*background-color: #E47947;*/
+    background: linear-gradient(#F58450,#E47947);
+    text-decoration:none;
+}
+
 input[type=text] {
     width: 200px;
     padding: 10px;
@@ -22,20 +91,47 @@ input[type=submit]{
 	font-size:25px;
 	font-family: "arial";
 }
- div.justified {
-        display: flex;
-        justify-content: center;
-    }
-#rightsect {
-    background-color:white;
-    float:left;
-    width:px;
-    padding:10px;
+
 }
-#image {
-    background-color:#FFFFFF;
-    float:left;
-   	height: 500px;
-    width: 600px; 
-    padding: 5px;
+h2 {
+	text-align: center;
+	font-size: 15px;
+}
+input[type=password] {
+    width: 200px;
+    padding: 10px;
+    font-size: 20px; 
+    color: white;  
+    font-family: "arial"
+    border: 3px;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+
+.posts {
+  clear: both;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.posts li {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
+}
+
+.button-group {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.selected {
+  background-color: green;
 }

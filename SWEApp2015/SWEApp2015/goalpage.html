@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="sweappstyle.css">
+		<script src="jquery-1.11.2.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script src="goalpg.js"></script>
 		<title> SWEShare Goals </title>
 	</head>
-	<body>
-		
-			<h1> Enter your goal! </h1>
+	<body id="goalpg">
+		<div class="container">
+      		<form>
+        	<div class="form-group">
+          		<textarea class="form-control status-box" cols="30" rows="2" placeholder="Write your goal here!"></textarea>
+        	</div>
+      		</form>
+						
+			<div class = "button-group pull-right">			
+			<a href="#" class="btn btn-primary">Submit goal</a>
+			<a href="#" class="btn btn-primary">Delete selected items</a>
+			</div>		
 
-			
-				<form name="goal user input" action="" method="get" id="goalusr">
-				</form>
-				<div class="justified">
-				<textarea name="goaltext" cols="40" rows="5" form="goalusr">
-				</textarea>
-				</div>
-				<br>
-				
-				<div class="justified">
-					<input type="image" src="submit.png" alt="Submit" form="goalusr" onMouseOver="this.src='submit_hover.png'" onMouseOut="this.src='submit.png'" />
-				</div>
-				
-				
+			<ul class="posts" id="sortable" id="selectable">
+      		</ul>	
 
-
-			
+		</div>
 
 	</body>
 
