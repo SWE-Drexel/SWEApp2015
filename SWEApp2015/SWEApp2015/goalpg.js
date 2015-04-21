@@ -1,29 +1,47 @@
 var main = function() {
-	$('ul').sortable();
-  $('.btn').click(function() {
+	$('ul').sortable(); 
+  $('#deletion').addClass('disabled');
+  $('#submission').addClass('disabled');
+
+  $('#submission').click(function() {
 		
     	var post = $('.status-box').val();
-    	$('<li>').text(post).appendTo('.posts');
-    	
+      $('.posts').append('<li class="goallist">'+ post +'</li>');   	
     	$('.status-box').val('');
-    	$('.btn').addClass('disabled'); 
+    	$('#submission').addClass('disabled'); 
+
+      if ( $('ul').children().length > 0) {
+        $('#deletion').removeClass('disabled');
+        }
+      else {
+        $('#deletion').addClass('disabled');
+      } 
+
   });
   
   $('.status-box').keyup(function() {
     var postLength = $(this).val().length;
     if(postLength === 0) {
-      $('.btn').addClass('disabled'); 
+      $('#submission').addClass('disabled'); 
     }
     else {
-      $('.btn').removeClass('disabled');
+      $('#submission').removeClass('disabled');
     }
   });
   
-  $('.btn').addClass('disabled');
+  $(document).on('click','.goallist',function() {
+        $(this).toggleClass('selected');
+    });
 
-  $('ul').click(function(){
-    $(this).addClass('selected');
+  $('#deletion').click(function() {
+    $('.selected').remove();
+    if ( $('ul').children().length > 0) {
+        $('#deletion').removeClass('disabled');
+        }
+      else {
+        $('#deletion').addClass('disabled');
+      }
   });
 
 };
-$(document).ready(main)
+$(window).load(main)
